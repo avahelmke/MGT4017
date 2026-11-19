@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ProjectBridge connects university students with businesses through short, paid projects." />
+  <title>ProjectBridge — Real Projects. Real Experience.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement"><span>✦</span> Your next opportunity could be one project away. <a href="#projects">Explore projects <span aria-hidden="true">→</span></a></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="ProjectBridge home">
+      <span class="brand-mark">PB</span><span>project<span class="brand-strong">bridge</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#projects">Explore Projects</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#about">About us</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-quiet" data-modal="loginModal">Log in</button>
+      <button class="btn btn-primary" data-modal="joinModal">Get started <span>↗</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> THE BRIDGE BETWEEN LEARNING & WORK</div>
+        <h1>Real projects.<br><span>Real experience.</span></h1>
+        <p class="hero-lede">Turn what you know into what you can do. Find short, paid projects with businesses looking for fresh ideas and emerging talent.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-large" data-role="student">I'm a student <span>→</span></button>
+          <button class="btn btn-outline btn-large" data-role="business">I'm a business <span>→</span></button>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack"><span>J</span><span>M</span><span>A</span><span>+</span></div>
+          <p><strong>Built for both sides.</strong><br><small>Students grow. Businesses move forward.</small></p>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="floating-note note-top"><span class="note-icon">✦</span><div><strong>Skills in action</strong><small>Build your portfolio</small></div></div>
+        <div class="dashboard-preview">
+          <div class="preview-top"><div class="mini-brand"><span class="brand-mark tiny">PB</span> ProjectBridge</div><span class="preview-status">● Live opportunities</span></div>
+          <div class="preview-heading"><div><small>YOUR NEXT STEP</small><h3>Find your next<br>great project.</h3></div><div class="preview-spark">✳</div></div>
+          <div class="preview-search">⌕ <span>Try “marketing” or “design”</span><b>→</b></div>
+          <div class="preview-tags"><span>Marketing</span><span>Design</span><span>Technology</span></div>
+          <div class="preview-project">
+            <div class="project-art art-blue"><span>✳</span></div>
+            <div class="preview-project-copy"><small>MARKETING · REMOTE</small><strong>Social Media Strategy</strong><span>Northstar Studio</span></div>
+            <strong class="preview-pay">£250</strong>
+          </div>
+          <div class="preview-project">
+            <div class="project-art art-yellow"><span>▥</span></div>
+            <div class="preview-project-copy"><small>DESIGN · HYBRID</small><strong>Website Refresh</strong><span>Goodfolk Creative</span></div>
+            <strong class="preview-pay">£400</strong>
+          </div>
+          <div class="preview-bottom"><span>↗ Your experience starts here</span><span>•••</span></div>
+        </div>
+        <div class="floating-note note-bottom"><span class="check-icon">✓</span><div><strong>Paid experience</strong><small>Work that counts</small></div></div>
+      </div>
+      <div class="hero-decoration">PROJECTS THAT MOVE YOU FORWARD&nbsp; ✳ &nbsp; PROJECTS THAT MOVE YOU FORWARD&nbsp; ✳</div>
+    </section>
+
+    <section class="stats-strip">
+      <div><strong>Short-term</strong><span>Flexible projects</span></div>
+      <div><strong>Paid work</strong><span>Value for your time</span></div>
+      <div><strong>Real clients</strong><span>Practical experience</span></div>
+      <div><strong>New skills</strong><span>Build your portfolio</span></div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="section-heading">
+        <div><div class="eyebrow">OPPORTUNITY STARTS HERE</div><h2>Find a project that<br><span>moves you forward.</span></h2></div>
+        <a class="text-link" href="#projects" id="viewAll">View all projects <span>→</span></a>
+      </div>
+      <div class="project-toolbar">
+        <label class="search-box"><span>⌕</span><input id="projectSearch" type="search" placeholder="Search projects, skills or companies..." /><kbd>↵</kbd></label>
+        <div class="filter-pills" role="group" aria-label="Filter projects">
+          <button class="filter-pill active" data-filter="All">All projects</button>
+          <button class="filter-pill" data-filter="Marketing">Marketing</button>
+          <button class="filter-pill" data-filter="Design">Design</button>
+          <button class="filter-pill" data-filter="Technology">Technology</button>
+        </div>
+      </div>
+      <div class="project-grid" id="projectGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>No projects match that search. Try another keyword.</p>
+      <div class="center-action"><button class="btn btn-outline" id="showMore">Explore all opportunities <span>→</span></button></div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="section-heading centered"><div class="eyebrow">SIMPLE BY DESIGN</div><h2>From first click to<br><span>real-world impact.</span></h2><p>Whether you're building your experience or growing your business, getting started is easy.</p></div>
+      <div class="audience-tabs"><button class="audience-tab active" data-how="student">For students</button><button class="audience-tab" data-how="business">For businesses</button></div>
+      <div class="steps-grid" id="stepsGrid"></div>
+    </section>
+
+    <section class="split-cta" id="about">
+      <div class="split-illustration"><div class="big-circle"><span>PB</span></div><div class="mini-card mini-card-one">✦ Skills meet opportunity</div><div class="mini-card mini-card-two">↗ Make work happen</div></div>
+      <div class="split-copy"><div class="eyebrow">WHY PROJECTBRIDGE?</div><h2>Experience shouldn't<br>be <span>out of reach.</span></h2><p>We believe potential grows when people get the chance to put their skills into practice. ProjectBridge makes it easier for students to access meaningful paid work and for businesses to find motivated emerging talent.</p><ul class="check-list"><li><span>✓</span> Real briefs from real businesses</li><li><span>✓</span> Flexible projects with clear expectations</li><li><span>✓</span> A place to build skills and confidence</li></ul><button class="btn btn-primary" data-modal="joinModal">Be part of the bridge <span>→</span></button></div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+      <div class="section-heading centered"><div class="eyebrow">CLEAR & SIMPLE</div><h2>Plans that make<br><span>good work possible.</span></h2><p>Start exploring for free. Businesses can choose the approach that suits their needs.</p></div>
+      <div class="pricing-grid">
+        <article class="price-card"><span class="plan-label">FOR STUDENTS</span><h3>Student</h3><div class="price">Free</div><p>Everything you need to discover opportunities and build experience.</p><ul><li>✓ Create a student profile</li><li>✓ Browse project opportunities</li><li>✓ Apply to suitable projects</li><li>✓ Track applications</li></ul><button class="btn btn-outline full-width" data-role="student">Join as a student</button></article>
+        <article class="price-card featured-price"><span class="popular-tag">A GREAT PLACE TO START</span><span class="plan-label">FOR BUSINESSES</span><h3>Project Starter</h3><div class="price">Free <small>to explore</small></div><p>Find emerging talent and test the platform with your first listing.</p><ul><li>✓ Create a company profile</li><li>✓ Draft and publish a project</li><li>✓ Review applications</li><li>✓ Manage project activity</li></ul><button class="btn btn-primary full-width" data-role="business">Post a project</button></article>
+        <article class="price-card"><span class="plan-label">FOR GROWING TEAMS</span><h3>Business Plus</h3><div class="price">Let’s talk</div><p>More support for businesses with ongoing project needs.</p><ul><li>✓ Everything in Project Starter</li><li>✓ Multiple project listings</li><li>✓ Priority support</li><li>✓ Partnership options</li></ul><button class="btn btn-outline full-width" data-scroll="#contact">Contact our team</button></article>
+      </div>
+      <p class="pricing-note">Illustrative prototype pricing. Final fees and commission structure would be confirmed before launch.</p>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="faq-intro"><div class="eyebrow">GOOD TO KNOW</div><h2>Questions?<br><span>We've got answers.</span></h2><p>Here are a few things people often ask about ProjectBridge.</p><a class="text-link" href="#contact">Still curious? Contact us →</a></div>
+      <div class="faq-list">
+        <details open><summary>What is ProjectBridge? <span>＋</span></summary><p>ProjectBridge is a platform connecting university students with businesses for short, paid projects. Students gain practical experience while businesses access emerging talent for specific needs.</p></details>
+        <details><summary>Who can create a student account? <span>＋</span></summary><p>University students interested in building skills, gaining experience and working on short-term projects can create a student profile.</p></details>
+        <details><summary>Are projects paid? <span>＋</span></summary><p>ProjectBridge is designed around paid opportunities. Each listing should clearly explain the compensation, scope and expected timeline before a student applies.</p></details>
+        <details><summary>How do businesses post a project? <span>＋</span></summary><p>Create a business account, add your project details, required skills, timeline and payment information, then submit the listing for review.</p></details>
+        <details><summary>How does ProjectBridge build trust? <span>＋</span></summary><p>The planned platform includes account verification, clear project information, communication tools, support and reviews after project completion.</p></details>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div><div class="eyebrow">LET'S CONNECT</div><h2>Have a question?<br><span>We're here to help.</span></h2><p>Whether you're a student or a business, we'd love to hear from you.</p></div>
+      <form class="contact-form" id="contactForm"><label>Your name<input required name="name" placeholder="Enter your name"></label><label>Email address<input required type="email" name="email" placeholder="you@example.com"></label><label>How can we help?<textarea required name="message" rows="3" placeholder="Tell us a little about your question..."></textarea></label><button class="btn btn-primary" type="submit">Send message <span>→</span></button><p class="form-feedback" id="contactFeedback" role="status"></p></form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark">PB</span><span>project<span class="brand-strong">bridge</span></span></a><p>Connecting emerging talent<br>with meaningful work.</p><div class="footer-links"><a href="#about">About</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div><button class="btn btn-light" data-modal="joinModal">Get started ↗</button></div><div class="footer-bottom"><span>© 2026 ProjectBridge. Prototype concept.</span><span>Made to connect potential with opportunity.</span></div></footer>
+
+  <!-- Modals -->
+  <div class="modal-backdrop" id="joinModal" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="joinTitle"><button class="modal-close" aria-label="Close">×</button><div class="eyebrow">WELCOME TO PROJECTBRIDGE</div><h2 id="joinTitle">Let's get you<br><span>started.</span></h2><p>Choose how you'd like to use ProjectBridge.</p><div class="role-options"><button class="role-option" data-role="student"><span class="role-symbol">✳</span><strong>I'm a student</strong><small>Find paid projects and build experience</small><b>→</b></button><button class="role-option" data-role="business"><span class="role-symbol">▥</span><strong>I'm a business</strong><small>Find talent and post a project</small><b>→</b></button></div></section></div>
+
+  <div class="modal-backdrop" id="signupModal" aria-hidden="true"><section class="modal modal-form" role="dialog" aria-modal="true" aria-labelledby="signupTitle"><button class="modal-close" aria-label="Close">×</button><div class="eyebrow" id="signupEyebrow">CREATE YOUR ACCOUNT</div><h2 id="signupTitle">Join ProjectBridge.</h2><p id="signupDescription">Create your profile to get started.</p><form id="signupForm"><input type="hidden" name="role" id="signupRole"><label>Full name<input required name="name" placeholder="Your full name"></label><label>Email address<input required type="email" name="email" placeholder="you@example.com"></label><label id="organisationLabel" hidden>University or company<input name="organisation" placeholder="Name of your university or company"></label><label>Password<input required type="password" minlength="6" name="password" placeholder="At least 6 characters"></label><button class="btn btn-primary full-width" type="submit">Create account <span>→</span></button><p class="form-feedback" id="signupFeedback" role="status"></p></form><small class="prototype-disclaimer">Demo only: details are not sent to a server or stored.</small></section></div>
+
+  <div class="modal-backdrop" id="loginModal" aria-hidden="true"><section class="modal modal-form" role="dialog" aria-modal="true" aria-labelledby="loginTitle"><button class="modal-close" aria-label="Close">×</button><div class="eyebrow">WELCOME BACK</div><h2 id="loginTitle">Log in.</h2><p>Access your ProjectBridge dashboard.</p><form id="loginForm"><label>Email address<input required type="email" placeholder="you@example.com"></label><label>Password<input required type="password" placeholder="Your password"></label><button class="btn btn-primary full-width" type="submit">Log in <span>→</span></button><p class="form-feedback" id="loginFeedback" role="status"></p></form><small class="prototype-disclaimer">Demo only: authentication is not connected.</small></section></div>
+
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true"><section class="modal project-detail-modal" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><button class="modal-close" aria-label="Close">×</button><div id="projectDetail"></div></section></div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
